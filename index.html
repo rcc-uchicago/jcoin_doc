@@ -1,0 +1,647 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
+    
+    
+      
+        <title>JCOIN Dashboard Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#jcoin-2019-federal-funding-dashboard-user-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="JCOIN Dashboard Documentation" class="md-header__button md-logo" aria-label="JCOIN Dashboard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            JCOIN Dashboard Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              JCOIN 2019 Federal Funding Dashboard User Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="JCOIN Dashboard Documentation" class="md-nav__button md-logo" aria-label="JCOIN Dashboard Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    JCOIN Dashboard Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        JCOIN 2019 Federal Funding Dashboard User Guide
+      </a>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="jcoin-2019-federal-funding-dashboard-user-guide">JCOIN 2019 Federal Funding Dashboard User Guide</h1>
+<p>Revised October 31, 2022</p>
+<p><strong>Table of Contents</strong></p>
+<p><a href="#introduction"><strong>Introduction</strong></a></p>
+<p><a href="#dashboard-diagram"><strong>Dashboard Diagram</strong></a></p>
+<p><a href="#dashboard-layout"><strong>Dashboard Layout</strong></a></p>
+<p><a href="#funding-dashboard"><strong>Funding Dashboard</strong></a></p>
+<p><a href="#section-1-filtering-on-state-andor-city">Section 1. Filtering on State and/or City</a></p>
+<p><a href="#section-2-filtering-on-funder">Section 2. Filtering on Funder</a></p>
+<p><a href="#grant-distribution-by-funder-chart"><strong>Grant Distribution by Funder Chart</strong></a></p>
+<p><a href="#section-1-filtering-on-funder">Section 1. Filtering on Funder</a></p>
+<p><a href="#grant-distribution-by-state-chart"><strong>Grant Distribution by State Chart</strong></a></p>
+<p><a href="#section-1-filtering-on-state">Section 1. Filtering on State</a></p>
+<p><a href="#section-2-filtering-on-state-and-funder--action">Section 2. Filtering on State and Funder</a></p>
+<h1 id="introduction">Introduction</h1>
+<p>The <a href="https://experience.arcgis.com/experience/020f8a71fc184c4489fc8304d7674e17">JCOIN 2019 Federal Funding Dashboard</a> provides users with the opportunity to explore the allocation of federal funding across the United States to address the opioid crisis in criminal justice-involved for 2019 and 2020.</p>
+<p>Depending on their search criteria, including state, city, Year, and funder, users can explore grants awarded across multiple categories by nine different funding organizations, including 2 partnerships.</p>
+<h2 id="dashboard-diagram">Dashboard Diagram</h2>
+<p><img alt="DiagramDescription automatically generated" src="https://rcc-uchicago.github.io/jcoin_doc/drex_dashboard_diagram_custom.png" /></p>
+<table>
+<thead>
+<tr>
+<th><strong>Drop-down Menu</strong></th>
+<th><strong>Bar-Chart Menu</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A - Year</td>
+<td>F - Grant count by State</td>
+</tr>
+<tr>
+<td>B - Multi-state Grants</td>
+<td>G - List of Grants</td>
+</tr>
+<tr>
+<td>C - State</td>
+<td>H - Funding Amount by State</td>
+</tr>
+<tr>
+<td>D - City</td>
+<td>I - Grant distribution by Funding Category</td>
+</tr>
+<tr>
+<td>E - Funder</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="dashboard-layout">Dashboard Layout</h2>
+<ol>
+<li>Header<ol>
+<li>About the Project<ol>
+<li>Justice Community Opioid Innovation Network (JCOIN) information</li>
+<li>Link for additional information</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Funding Dashboard<ol>
+<li></li>
+<li>Year</li>
+<li>Multistate Grant</li>
+<li>State</li>
+<li>City</li>
+<li>Funder</li>
+</ol>
+</li>
+<li>US Map<ol>
+<li>Home button</li>
+<li>Zoom (+/-)</li>
+</ol>
+</li>
+<li>Grant List<ol>
+<li>Forward/reverse arrows</li>
+<li>Title</li>
+<li>Funder</li>
+<li>Year</li>
+<li>Funding</li>
+<li>Grant number</li>
+<li>Institution receiving funding</li>
+<li>Multi-state indicator</li>
+</ol>
+</li>
+<li>Grant Distribution by Funder Chart<ol>
+<li>Funders (acronym)</li>
+<li>Funder List (acronym and full funder name)</li>
+</ol>
+</li>
+<li>Grant Distribution by State<ol>
+<li>Bar Chart by State<ol>
+<li>X-axis – states</li>
+<li>Y-axis – number of grants</li>
+<li>Directional scroll bar</li>
+</ol>
+</li>
+<li>Table<ol>
+<li>Funder</li>
+<li>Title</li>
+<li>Institution receiving funding</li>
+<li>Funding</li>
+<li>Category</li>
+<li>City</li>
+<li>State</li>
+<li>Multistate</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Footer<ol>
+<li>Methods<ol>
+<li>JCOIN Methods</li>
+<li>Data Sources</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="funding-dashboard">Funding Dashboard</h2>
+<p>The dashboard provides the user the opportunity to filter their search results on year, State, City, or a combination of all, as well as Funder.</p>
+<h3 id="_1"></h3>
+<h3 id="section-1-filtering-on-state-andor-city">Section 1. Filtering on State and/or City</h3>
+<p><strong>Action</strong></p>
+<ol>
+<li>Select the desired Year from the drop down<ol>
+<li>2019 or 2020 or both may be selected</li>
+</ol>
+</li>
+<li>For Multi-state grants True or False options are available</li>
+<li>Select the desired state from the drop down<ol>
+<li>Up to 1 state may be selected</li>
+<li>Only states with grants will be available</li>
+</ol>
+</li>
+<li>Select the desired city or cities from the drop down<ol>
+<li>Multiple cities may be selected</li>
+<li>Only cities with grants will be available</li>
+</ol>
+</li>
+</ol>
+<p><strong>Results</strong></p>
+<ol>
+<li>Funder<ol>
+<li>The funder list will only display those that have funded grants in the selected state and cities, if selected.</li>
+</ol>
+</li>
+<li>Map<ol>
+<li>Pinpoints that are color-coded to the applicable funder will display in the selected state.</li>
+<li>Click on the pinpoint and 6 lines of grant related information will display in a pop-up.</li>
+</ol>
+</li>
+<li>Grant List<ol>
+<li>The number of associate grants will display with the option to move forward or in reverse to view the list.<ol>
+<li>For each grant, the title, Funder, Grant number, funding, and Institution receiving funding will be viewable.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Grant Distribution by Funder chart<ol>
+<li>The Funder acronym and the number of grants will display.</li>
+<li>The Funders are color-coded to match the pinpoint colors on the map.</li>
+</ol>
+</li>
+<li>Grant count by State chart, table, Funding Amount by State chart, and Grant distribution by Funding Category<ol>
+<li>Bar count by State (grant distribution), and Funding Amount by State chart (Funding distribution)<ol>
+<li>The states with grants will display<ol>
+<li>Depending on the number of states, the state abbreviations may not all appear on the x-axis. Using the directional scroll bar will allow the user to explore the unlabeled states.</li>
+<li>Hover over any vertical bar and the state abbreviation and the number of grants will display.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Grant Details<ol>
+<li>Grant details will display, alphabetized by Funder and State.</li>
+<li>Selecting a grant will update the map to the grant location.</li>
+<li>Select the Home button to reset the map.</li>
+</ol>
+</li>
+<li>Grant distribution by Funding Category (Category distribution) indicated count of grants by nine finding categories.</li>
+</ol>
+</li>
+</ol>
+<h3 id="section-2-filtering-on-funder">Section 2. Filtering on Funder</h3>
+<p><strong>Action</strong></p>
+<ol>
+<li>Select the desired Funder<ol>
+<li>Multiple Funders may be selected.</li>
+<li>NOTES<ol>
+<li>To deselect a Funder, with the cursor on the Funder press Ctrl + Shift OR click on the Funder button.</li>
+<li>A state and/or cities may also be selected.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p><strong>Results</strong></p>
+<ol>
+<li>Map<ol>
+<li>Pinpoints that are color-coded to the applicable funder(s) will display in the states.</li>
+<li>Click on the pinpoint and 4 lines of grant related information will display in a pop-up.</li>
+</ol>
+</li>
+<li>Grant List<ol>
+<li>The number of associate grants will display with the option to move forward or in reverse to view the list.<ol>
+<li>For each grant, the title, Funder, Grant number, and Institution receiving funding will be viewable.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Grant Distribution by Funder chart<ol>
+<li>The Funder acronym and the number of grants will display.</li>
+<li>The Funders are color-coded to match the pinpoint colors on the map.</li>
+</ol>
+</li>
+<li>Grant Distribution by State chart and table<ol>
+<li>Bar Chart by State<ol>
+<li>The states with grants will display<ol>
+<li>Depending on the number of states, the state abbreviations may not all appear on the x-axis. Using the directional scroll bar will allow the user to explore the unlabeled states.</li>
+<li>Hover over any vertical bar and the state abbreviation and the number of grants will display.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Table<ol>
+<li>Grant details will display, alphabetized by Funder and State</li>
+<li>Selecting a grant will update the map to the grant location.</li>
+<li>Select the Home button to reset the map.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="grant-distribution-by-funder-chart">Grant Distribution by Funder Chart</h2>
+<p>The chart provides the user with information about which funders provided grants based on the selection criteria (e.g., year, state and/or city). A user is able to make additional selections to filter results to explore an individual funder or a combination of funders, as applicable.</p>
+<h3 id="section-1-filtering-on-funder">Section 1. Filtering on Funder</h3>
+<p><strong>Action</strong></p>
+<ol>
+<li>Select the bar of the desired Funder<ol>
+<li>Up to 1 Funder may be selected.</li>
+<li>NOTE:<ol>
+<li>To deselect a Funder, click on the selected Funder bar OR click on the white space in the chart.</li>
+<li>The funder bars not selected will be grayed out.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p><strong>Results</strong></p>
+<ol>
+<li>Map<ol>
+<li>Pinpoints that are color-coded to the selected funder will display in the states.</li>
+<li>Click on the pinpoint and 4 lines of grant related information will display in a pop-up.</li>
+</ol>
+</li>
+<li>Grant List<ol>
+<li>The number of associated grants will display with the option to move forward or in reverse to view the list.<ol>
+<li>For each grant, the title, Funder, Grant number, and Institution receiving funding will be viewable.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Grant Distribution by State chart and table<ol>
+<li>Bar Chart by State<ol>
+<li>The states with grants will display<ol>
+<li>Depending on the number of states, the state abbreviations may not all appear on the x-axis. Using the directional scroll bar will allow the user to explore the unlabeled states.</li>
+<li>Hover over any vertical bar and the state abbreviation and the number of grants will display.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Table<ol>
+<li>Grant details will display, alphabetized by Funder and State.</li>
+<li>Selecting a grant will update the map to the grant location.</li>
+<li>Select the Home button to reset the map.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="_2"></h2>
+<h2 id="grant-distribution-by-state-chart">Grant Distribution by State Chart</h2>
+<p>The chart provides the user with a Bar Chart by State detailing the grants awarded to institutions within a given state. A user is able to make an additional selection to filter results to explore individual states.</p>
+<p>The chart provides the user with a Table detailing grant-specific information, displayed in alphabetical order by Funder and then state. A user has the option to select a grant to view the location of the institution receiving funding on the map.</p>
+<h3 id="section-1-filtering-on-state">Section 1. Filtering on State</h3>
+<p><strong>Action</strong></p>
+<ol>
+<li>Select the bar of the desired state<ol>
+<li>Up to 1 state may be selected.</li>
+<li>NOTE:<ol>
+<li>To deselect a state, click on the selected State bar OR click on the white space in the chart.</li>
+<li>The state bars not selected will appear faded.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p><strong>Results</strong></p>
+<ol>
+<li>Map<ol>
+<li>Pinpoints that are color-coded to the selected funder will display in the states.</li>
+<li>Click on the pinpoint and 4 lines of grant related information will display in a pop-up.</li>
+</ol>
+</li>
+<li>Grant List<ol>
+<li>The number of associated grants will display with the option to move forward or in reverse to view the list.<ol>
+<li>For each grant, the title, Funder, Grant number, and Institution receiving funding will be viewable.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Grant Distribution by Funder chart<ol>
+<li>The associated Funder acronyms and the number of grants will display.</li>
+<li>The Funders are color-coded to match the pinpoint colors on the map.</li>
+</ol>
+</li>
+<li>Grant Distribution by State table<ol>
+<li>Grant details will display, alphabetized by Funder and State</li>
+<li>Selecting a grant will update the map to the grant location.</li>
+<li>Select the Home button to reset the map.</li>
+</ol>
+</li>
+</ol>
+<h3 id="section-2-filtering-on-state-and-funder-action">Section 2. Filtering on State and Funder  <strong>Action</strong></h3>
+<ol>
+<li>Select the bar of the desired state<ol>
+<li>Only 1 state may be selected.</li>
+<li>NOTE:<ol>
+<li>To deselect a state, click on the selected State bar OR click on the white space in the chart.</li>
+<li>The state bars not selected will appear faded.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Select the bar of the desired Funder in the Grant Distribution by Funder chart<ol>
+<li>Up to 1 Funder may be selected.</li>
+<li>NOTE:<ol>
+<li>To deselect a Funder, click on the selected Funder bar OR click on the white space in the chart.</li>
+<li>The funder bars not selected will be grayed out.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p><strong>Results</strong></p>
+<ol>
+<li>Map<ol>
+<li>Pinpoints that are color-coded to the selected state and funder will display in the state.</li>
+<li>Click on the pinpoint and 4 lines of grant related information will display in a pop-up.</li>
+</ol>
+</li>
+<li>Grant List<ol>
+<li>The number of associated grants will display with the option to move forward or in reverse to view the list.<ol>
+<li>For each grant, the title, Funder, Grant number, and Institution receiving funding will be viewable.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Grant Distribution by Funder chart<ol>
+<li>The associated Funder acronym and the number of grants will display.</li>
+<li>The Funders are color-coded to match the pinpoint colors on the map.</li>
+</ol>
+</li>
+<li>Grant Distribution by State table<ol>
+<li>Grant details will display, alphabetized by Funder and State</li>
+<li>Selecting a grant will update the map to the grant location.</li>
+<li>Select the Home button to reset the map.</li>
+</ol>
+</li>
+</ol>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.8492ddcf.min.js"></script>
+      
+    
+  </body>
+</html>
