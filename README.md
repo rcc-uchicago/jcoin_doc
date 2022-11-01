@@ -1,1 +1,1 @@
-# jcoin_doc
+# Documentation site for JCOIN Dashboard

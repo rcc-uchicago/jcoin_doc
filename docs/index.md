@@ -28,21 +28,21 @@ Revised October 31, 2022
 
 # Introduction
 
-The [JCOIN 2019 Federal Funding Dashboard](https://experience.arcgis.com/experience/020f8a71fc184c4489fc8304d7674e17) provides users with the opportunity to explore the allocation of federal funding across the United States to address the opioid crisis in criminal justice-involved for 2019 and 2020.
+The [JCOIN 2019 Federal Funding Dashboard](https://uchicago.maps.arcgis.com/apps/dashboards/e24ba1813db349399f26e39ed006d0b5) provides users with the opportunity to explore the allocation of federal funding across the United States to address the opioid crisis in criminal justice-involved for 2019 and 2020.
 
 Depending on their search criteria, including state, city, Year, and funder, users can explore grants awarded across multiple categories by nine different funding organizations, including 2 partnerships.
 
 ## Dashboard Diagram
 
-![DiagramDescription automatically generated](https://rcc-uchicago.github.io/jcoin_doc/drex_dashboard_diagram_custom.png)
+![DiagramDescription automatically generated](media/drex_dashboard_diagram_custom.png)
 
-| **Drop-down Menu**                                            | **Bar-Chart Menu**                                                                                                 |
-|---------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| A - Year | F - Grant count by State 
-|B - Multi-state Grants |  G - List of Grants 
-|C - State |H - Funding Amount by State 
-|D - City |I - Grant distribution by Funding Category 
-|E - Funder ||
+| **Drop-down Menu**     | **Bar-Chart Menu**                         |**Left-panel**| **Map Control**
+|------------------------|--------------------------------------------|----------|
+| A - Year               | F - Grant count by State                   |J - Grant List|L - Zoom (+/-)
+| B - Multi-state Grants | G - List of Grants                         |K - Funder Chart|M - Home button
+| C - State              | H - Funding Amount by State                |
+| D - City               | I - Grant distribution by Funding Category |
+| E - Funder             |                                            |
 
 ## Dashboard Layout
 
@@ -50,16 +50,23 @@ Depending on their search criteria, including state, city, Year, and funder, use
     1.  About the Project
         1.  Justice Community Opioid Innovation Network (JCOIN) information
         2.  Link for additional information
+    
 2.  Funding Dashboard
-    1.  
-    2.  Year
-    3.  Multistate Grant
-    4.  State
-    5.  City
-    6.  Funder
+
+```mermaid
+graph TD
+C{Dashboard Filter}
+    C -->D[Year]
+    C -->E[Multistate]
+    C -->F[State]
+    C --> G[City]
+    C --> H[Funder]
+```
+
 3.  US Map
     1.  Home button
     2.  Zoom (+/-)
+    
 4.  Grant List
     1.  Forward/reverse arrows
     2.  Title
@@ -69,11 +76,13 @@ Depending on their search criteria, including state, city, Year, and funder, use
     6.  Grant number
     7.  Institution receiving funding
     8.  Multi-state indicator
+    
 5.  Grant Distribution by Funder Chart
     1.  Funders (acronym)
     2.  Funder List (acronym and full funder name)
+    
 6.  Grant Distribution by State
-    1.  Bar Chart by State
+    1.  Grant count by State
         1.  X-axis – states
         2.  Y-axis – number of grants
         3.  Directional scroll bar
@@ -86,6 +95,14 @@ Depending on their search criteria, including state, city, Year, and funder, use
         6.  City
         7.  State
         8.  Multistate
+    3.  Funding Amount by State
+        1.  X-axis – states
+        2.  Y-axis – Total grant amount
+        3.  Directional scroll bar
+    4.  Grant distribution by Funding Category
+        1.  X-axis – Funding Category
+        2.  Y-axis – number of grants
+    
 7.  Footer
     1.  Methods
         1.  JCOIN Methods
@@ -133,7 +150,7 @@ The dashboard provides the user the opportunity to filter their search results o
         1.  Grant details will display, alphabetized by Funder and State.
         2.  Selecting a grant will update the map to the grant location.
         3.  Select the Home button to reset the map.
-    3.  Grant distribution by Funding Category (Category distribution) indicated count of grants by nine finding categories.
+    3.  Grant distribution by Funding Category (Category distribution) indicated count of grants by nine finding categories. Select Year ![DiagramDescription select Year](media/drex_section_2__filtering_on_funder_custom_2.png) Select State ![DiagramDescription select State](media/drex_section_2__filtering_on_funder_custom_4.png) Select City ![DiagramDescription select City](media/drex_section_2__filtering_on_funder_custom_3.png)
 
 ### Section 2. Filtering on Funder
 
@@ -164,7 +181,7 @@ The dashboard provides the user the opportunity to filter their search results o
     2.  Table
         1.  Grant details will display, alphabetized by Funder and State
         2.  Selecting a grant will update the map to the grant location.
-        3.  Select the Home button to reset the map.
+        3.  Select the Home button to reset the map. ![DiagramDescription select Funder](media/funder_selection.png) Multiple funder selection ![DiagramDescription select multiple Funder](media/funder_selection_2.png)
 
 ## Grant Distribution by Funder Chart
 
@@ -196,7 +213,7 @@ The chart provides the user with information about which funders provided grants
     2.  Table
         1.  Grant details will display, alphabetized by Funder and State.
         2.  Selecting a grant will update the map to the grant location.
-        3.  Select the Home button to reset the map.
+        3.  Select the Home button to reset the map. ![DiagramDescription select Funder](media/funder_selection_bybar.png)
 
 ## 
 
@@ -232,7 +249,7 @@ The chart provides the user with a Table detailing grant-specific information, d
     2.  Selecting a grant will update the map to the grant location.
     3.  Select the Home button to reset the map.
 
-### Section 2. Filtering on State and Funder  **Action**
+### Section 2. Filtering on State and Funder Action
 
 1.  Select the bar of the desired state
     1.  Only 1 state may be selected.
@@ -260,3 +277,10 @@ The chart provides the user with a Table detailing grant-specific information, d
     1.  Grant details will display, alphabetized by Funder and State
     2.  Selecting a grant will update the map to the grant location.
     3.  Select the Home button to reset the map.
+
+        ![DiagramDescription select Funder](media/funding_by_state.png)
+
+        ![DiagramDescription select Funder](media/drex_section_2__filtering_on_state_and_funder__action_custom_2.png)  
+        Combined filtering by state and category ![DiagramDescription select Funder](media/funding_by_state_category.png)
+
+        For Maps to change the scale back to country scale, click default map resolution ![DiagramDescription select Funder](media/drex_section_2__filtering_on_state_and_funder__action_custom_3.png)
