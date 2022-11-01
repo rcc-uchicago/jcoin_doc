@@ -282,7 +282,9 @@
 </table>
 <h2 id="dashboard-layout">Dashboard Layout</h2>
 <ol>
-<li>Header<ol>
+<li>
+<p>Header</p>
+<ol>
 <li>About the Project<ol>
 <li>Justice Community Opioid Innovation Network (JCOIN) information</li>
 <li>Link for additional information</li>
@@ -290,21 +292,29 @@
 </li>
 </ol>
 </li>
-<li>Funding Dashboard<ol>
-<li></li>
-<li>Year</li>
-<li>Multistate Grant</li>
-<li>State</li>
-<li>City</li>
-<li>Funder</li>
-</ol>
+<li>
+<p>Funding Dashboard</p>
 </li>
-<li>US Map<ol>
+</ol>
+<pre><code class="language-mermaid">graph TD
+C{Dashboard Filter}
+    C --&gt;D[Year]
+    C --&gt;E[Multistate]
+    C --&gt;F[State]
+    C --&gt; G[City]
+    C --&gt; H[Funder]
+</code></pre>
+<ol>
+<li>
+<p>US Map</p>
+<ol>
 <li>Home button</li>
 <li>Zoom (+/-)</li>
 </ol>
 </li>
-<li>Grant List<ol>
+<li>
+<p>Grant List</p>
+<ol>
 <li>Forward/reverse arrows</li>
 <li>Title</li>
 <li>Funder</li>
@@ -315,13 +325,17 @@
 <li>Multi-state indicator</li>
 </ol>
 </li>
-<li>Grant Distribution by Funder Chart<ol>
+<li>
+<p>Grant Distribution by Funder Chart</p>
+<ol>
 <li>Funders (acronym)</li>
 <li>Funder List (acronym and full funder name)</li>
 </ol>
 </li>
-<li>Grant Distribution by State<ol>
-<li>Bar Chart by State<ol>
+<li>
+<p>Grant Distribution by State</p>
+<ol>
+<li>Grant count by State<ol>
 <li>X-axis – states</li>
 <li>Y-axis – number of grants</li>
 <li>Directional scroll bar</li>
@@ -338,9 +352,22 @@
 <li>Multistate</li>
 </ol>
 </li>
+<li>Funding Amount by State<ol>
+<li>X-axis – states</li>
+<li>Y-axis – Total grant amount</li>
+<li>Directional scroll bar</li>
 </ol>
 </li>
-<li>Footer<ol>
+<li>Grant distribution by Funding Category<ol>
+<li>X-axis – Funding Category</li>
+<li>Y-axis – number of grants</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>Footer</p>
+<ol>
 <li>Methods<ol>
 <li>JCOIN Methods</li>
 <li>Data Sources</li>
@@ -409,13 +436,7 @@
 <li>Select the Home button to reset the map.</li>
 </ol>
 </li>
-<li>Grant distribution by Funding Category (Category distribution) indicated count of grants by nine finding categories.
-Select Year
-<img alt="DiagramDescription select Year" src="media/drex_section_2__filtering_on_funder_custom_2.png" /> 
-Select State
-<img alt="DiagramDescription select State" src="media/drex_section_2__filtering_on_funder_custom_4.png" />
-Select City
-<img alt="DiagramDescription select City" src="media/drex_section_2__filtering_on_funder_custom_3.png" /></li>
+<li>Grant distribution by Funding Category (Category distribution) indicated count of grants by nine finding categories. Select Year <img alt="DiagramDescription select Year" src="media/drex_section_2__filtering_on_funder_custom_2.png" /> Select State <img alt="DiagramDescription select State" src="media/drex_section_2__filtering_on_funder_custom_4.png" /> Select City <img alt="DiagramDescription select City" src="media/drex_section_2__filtering_on_funder_custom_3.png" /></li>
 </ol>
 </li>
 </ol>
@@ -463,10 +484,7 @@ Select City
 <li>Table<ol>
 <li>Grant details will display, alphabetized by Funder and State</li>
 <li>Selecting a grant will update the map to the grant location.</li>
-<li>Select the Home button to reset the map.
-<img alt="DiagramDescription select Funder" src="media/funder_selection.png" />
-Multiple funder selection
-<img alt="DiagramDescription select multiple Funder" src="media/funder_selection_2.png" /></li>
+<li>Select the Home button to reset the map. <img alt="DiagramDescription select Funder" src="media/funder_selection.png" /> Multiple funder selection <img alt="DiagramDescription select multiple Funder" src="media/funder_selection_2.png" /></li>
 </ol>
 </li>
 </ol>
@@ -513,8 +531,7 @@ Multiple funder selection
 <li>Table<ol>
 <li>Grant details will display, alphabetized by Funder and State.</li>
 <li>Selecting a grant will update the map to the grant location.</li>
-<li>Select the Home button to reset the map.
-<img alt="DiagramDescription select Funder" src="media/funder_selection_bybar.png" />  </li>
+<li>Select the Home button to reset the map. <img alt="DiagramDescription select Funder" src="media/funder_selection_bybar.png" /></li>
 </ol>
 </li>
 </ol>
@@ -563,7 +580,7 @@ Multiple funder selection
 </ol>
 </li>
 </ol>
-<h3 id="section-2-filtering-on-state-and-funder-action">Section 2. Filtering on State and Funder  <strong>Action</strong></h3>
+<h3 id="section-2-filtering-on-state-and-funder-action">Section 2. Filtering on State and Funder Action</h3>
 <ol>
 <li>Select the bar of the desired state<ol>
 <li>Only 1 state may be selected.</li>
@@ -603,19 +620,17 @@ Multiple funder selection
 <li>The Funders are color-coded to match the pinpoint colors on the map.</li>
 </ol>
 </li>
-<li>
-<p>Grant Distribution by State table</p>
-<ol>
+<li>Grant Distribution by State table<ol>
 <li>Grant details will display, alphabetized by Funder and State</li>
 <li>Selecting a grant will update the map to the grant location.</li>
-<li>Select the Home button to reset the map.</li>
-</ol>
+<li>
+<p>Select the Home button to reset the map.</p>
 <p><img alt="DiagramDescription select Funder" src="media/funding_by_state.png" /></p>
 <p><img alt="DiagramDescription select Funder" src="media/drex_section_2__filtering_on_state_and_funder__action_custom_2.png" /><br />
-Combined filtering by state and category
-<img alt="DiagramDescription select Funder" src="media/funding_by_state_category.png" />  </p>
-<p>For Maps to change the scale back to country scale, click default map resolution
-<img alt="DiagramDescription select Funder" src="media/drex_section_2__filtering_on_state_and_funder__action_custom_3.png" />  </p>
+Combined filtering by state and category <img alt="DiagramDescription select Funder" src="media/funding_by_state_category.png" /></p>
+<p>For Maps to change the scale back to country scale, click default map resolution <img alt="DiagramDescription select Funder" src="media/drex_section_2__filtering_on_state_and_funder__action_custom_3.png" /></p>
+</li>
+</ol>
 </li>
 </ol>
 
