@@ -250,36 +250,13 @@
 <p>Depending on their search criteria, including state, city, Year, and funder, users can explore grants awarded across multiple categories by nine different funding organizations, including 2 partnerships.</p>
 <h2 id="dashboard-diagram">Dashboard Diagram</h2>
 <p><img alt="DiagramDescription automatically generated" src="media/drex_dashboard_diagram_custom.png" /></p>
-<table>
-<thead>
-<tr>
-<th><strong>Drop-down Menu</strong></th>
-<th><strong>Bar-Chart Menu</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A - Year</td>
-<td>F - Grant count by State</td>
-</tr>
-<tr>
-<td>B - Multi-state Grants</td>
-<td>G - List of Grants</td>
-</tr>
-<tr>
-<td>C - State</td>
-<td>H - Funding Amount by State</td>
-</tr>
-<tr>
-<td>D - City</td>
-<td>I - Grant distribution by Funding Category</td>
-</tr>
-<tr>
-<td>E - Funder</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<p>| <strong>Drop-down Menu</strong>     | <strong>Bar-Chart Menu</strong>                         |<strong>Left-panel</strong>| <strong>Map Control</strong>
+|------------------------|--------------------------------------------|----------|
+| A - Year               | F - Grant count by State                   |J - Grant List|L - Zoom (+/-)
+| B - Multi-state Grants | G - List of Grants                         |K - Funder Chart|M - Home button
+| C - State              | H - Funding Amount by State                |
+| D - City               | I - Grant distribution by Funding Category |
+| E - Funder             |                                            |</p>
 <h2 id="dashboard-layout">Dashboard Layout</h2>
 <ol>
 <li>
@@ -293,15 +270,17 @@
 </ol>
 </li>
 <li>
-<p>Funding Dashboard
+<p>Funding Dashboard</p>
+</li>
+</ol>
 <pre class="mermaid"><code>graph TD
 C{Dashboard Filter}
     C --&gt;D[Year]
     C --&gt;E[Multistate]
     C --&gt;F[State]
     C --&gt; G[City]
-    C --&gt; H[Funder]</code></pre></p>
-</li>
+    C --&gt; H[Funder]</code></pre>
+<ol>
 <li>
 <p>US Map</p>
 <ol>
